@@ -1,8 +1,16 @@
-#Напишите программу для. проверки 
-# истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z 
-# для всех значений предикат.
-for x in range(2):
-     for y in range(2):
-         for z in range(2):
-             print(not (x or y or z) == (not x and not y and not z))
-             print(x,y,z)
+# 5. Реализуйте алгоритм перемешивания списка.
+
+from random import randrange
+
+num = int(input())
+num_list = list(range(num))
+len_list = len(num_list)
+
+print(num_list)
+
+for i in range(len_list):
+    n1 = randrange(len_list)
+    n2 = randrange(len_list)
+    num_list[n1], num_list[n2] = num_list[n2], num_list[n1]
+
+print(num_list)

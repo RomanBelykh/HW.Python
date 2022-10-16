@@ -1,0 +1,14 @@
+& C:/Users/Роман/AppData/Local/Programs/Python/Python310/python.exe c:/Users/Роман/Desktop/Homework2/Task4.py
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+5

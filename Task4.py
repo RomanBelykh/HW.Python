@@ -1,16 +1,17 @@
-# Напишите программу, которая принимает на вход координаты двух точек 
-# и находит расстояние между ними в 2D пространстве.
+# Задайте список из N элементов, заполненных числами из промежутка [-N, N]. 
+# Найдите произведение элементов на указанных позициях. 
+# Позиции хранятся в файле file.txt в одной строке одно число.
 
-# Пример:
-# - A (3,6); B (2,1) -> 5,09
-# - A (7,-5); B (1,-1) -> 7,21
+num = int(input("Enter the value of N "))
+n1 = int (input("Position one: "))
+n2 = int (input("Position two: "))
 
-X_A = int(input('Введите координату X первой точки - '))
-Y_A = int(input('Введите координату Y первой точки - '))
-X_B = int(input('Введите координату X второй точки - '))
-Y_B = int(input('Введите координату Y второй точки - '))
+num_list = list(range(-num, num+1))
 
-x_line = X_B-X_A
-y_line = Y_B-Y_A
-dist_quad = (x_line**2 + y_line**2)**0.5
-print(round(dist_quad, 2))
+print(num_list)
+len_list = len(num_list)
+
+if len_list >= n1>0 and len_list >=2>0:
+    print(num_list[n1-1]*num_list[n2-1])
+else:
+    print("There are no values for these index")
