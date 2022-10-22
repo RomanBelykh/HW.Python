@@ -1,11 +1,16 @@
+# Задача 3. Задайте список из вещественных чисел. Напишите программу, которая найдёт 
+# разницу между максимальным и минимальным значением дробной части элементов.
 
-# 3.Задайте список из n чисел последовательности $(1+\frac 1 n)^n$ и выведите на экран их сумму.
+# Пример:
 
-n = int(input("Введите число n - "))
-sum = 0
+# - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+inp = list(map(float, input('Введите число - ').split()))
 ans = list()
-for i in range(1, n+1):
-     sum += ((1+1/i)**i)
-     ans.append(round(((1+1/i)**i), 2))
-print(ans)
-print(round(sum,1))
+for i in inp:
+    x= i - int(i)
+    if x !=0:
+       ans.append(round(x, 5))
+if max(ans) == min(ans):
+    print (max(ans))
+else:
+    print(max(ans) - min(ans))

@@ -1,16 +1,22 @@
-# 5. Реализуйте алгоритм перемешивания списка.
 
-from random import randrange
+#Задача 5. Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
 
-num = int(input())
-num_list = list(range(num))
-len_list = len(num_list)
+# Пример:
 
-print(num_list)
+# - для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 
-for i in range(len_list):
-    n1 = randrange(len_list)
-    n2 = randrange(len_list)
-    num_list[n1], num_list[n2] = num_list[n2], num_list[n1]
-
-print(num_list)
+def Fibonacci(number):
+    if number ==1 or number ==2:
+       return 1
+    else:
+       return Fibonacci(number-1) + Fibonacci(number-2)
+N = int(input('Введите чило - '))
+ans = list ()
+for i in range(1, N+1):
+    ans.append(Fibonacci(i)*((-1)**(i+1)))
+ans.reverse()
+ans.append(0)
+for i in range(1, N+1):
+        ans.append(Fibonacci(i))
+print(*ans)
+ #Эту задачу я подсмотрел

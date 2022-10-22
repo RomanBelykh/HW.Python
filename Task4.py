@@ -1,17 +1,23 @@
-# Задайте список из N элементов, заполненных числами из промежутка [-N, N]. 
-# Найдите произведение элементов на указанных позициях. 
-# Позиции хранятся в файле file.txt в одной строке одно число.
+#Задача 4. Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 
-num = int(input("Enter the value of N "))
-n1 = int (input("Position one: "))
-n2 = int (input("Position two: "))
+# Пример:
 
-num_list = list(range(-num, num+1))
+# - 45 -> 101101
+# - 3 -> 11
+# - 2 -> 10
 
-print(num_list)
-len_list = len(num_list)
+def BinaryCode (number):
+    ans = list()
+    rest = number% 2
+    rez = number// 2
+    ans.append(rest)
+    while rez !=0:
+       rest = rez % 2
+       rez = rez// 2
+       ans.append(rest)
+    ans.reverse
+    return ans
 
-if len_list >= n1>0 and len_list >=2>0:
-    print(num_list[n1-1]*num_list[n2-1])
-else:
-    print("There are no values for these index")
+N = int(input('Введите число - '))
+answer = BinaryCode(N)
+print(N, ' в двоичном коде - ', *answer, sep ='')
